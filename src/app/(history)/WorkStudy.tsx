@@ -11,6 +11,14 @@ const workSteps: WorkStepProps[] = [
     startDate: "2021-09-01",
     endDate: "2021-09-30",
   },
+  {
+    title: "Account",
+    image: "/images/work-study/account.svg",
+    fallBack: "ER",
+    position: "Update your account information.",
+    startDate: "2021-09-01",
+    endDate: "2021-09-30",
+  },
 ];
 
 const WorkStudy = () => {
@@ -22,23 +30,23 @@ const WorkStudy = () => {
     <div className={"w-full"}>
       <Tabs defaultValue="account" className="w-full">
         <TabsList className={"w-full"}>
-          <TabsTrigger className={"w-1/2"} value="account">
-            Account
+          <TabsTrigger className={"w-1/2"} value="work">
+            Work
           </TabsTrigger>
-          <TabsTrigger className={"w-1/2"} value="password">
-            Password
+          <TabsTrigger className={"w-1/2"} value="education">
+            Education
           </TabsTrigger>
         </TabsList>
         <div className={"mt-2 transition-all"}>
           <TabsContent
             className={"rounded-xl border border-white"}
-            value="account"
+            value="work"
           >
             {workStepsList}
           </TabsContent>
           <TabsContent
             className={"rounded-xl border border-white"}
-            value="password"
+            value="education"
           >
             {workStepsList}
           </TabsContent>
