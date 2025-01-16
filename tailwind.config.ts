@@ -29,6 +29,14 @@ export default {
           "0%, 100%": { transform: "rotate(-6deg)" },
           "50%": { transform: "rotate(6deg)" },
         },
+        fill: {
+          "0%": {
+            width: "0%",
+          },
+          "100%": {
+            width: "100%",
+          },
+        },
         popUp: {
           "0%": {
             opacity: "0",
@@ -44,6 +52,7 @@ export default {
         ripple: "ripple 20s infinite ease-in-out",
         popUp: "popUp 0.9s ease-in-out forwards",
         wiggle: "wiggle 1s ease-in-out infinite",
+        fill: "fill 0.5s linear forwards",
       },
       fontFamily: {
         sans: ["var(--font-geist-sans)", ...fontFamily.sans],

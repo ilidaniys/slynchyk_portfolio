@@ -28,7 +28,7 @@ const WorkStudySection = () => {
   );
   return (
     <div className={"w-full"}>
-      <Tabs defaultValue="account" className="w-full">
+      <Tabs defaultValue="work" className="w-full">
         <TabsList className={"w-full"}>
           <TabsTrigger className={"w-1/2"} value="work">
             Work
