@@ -1,6 +1,6 @@
 import React, { useMemo } from "react";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "~/components/ui/tabs";
-import WorkStep, { type WorkStepProps } from "~/app/(history)/WorkStep";
+import Step, { type WorkStepProps } from "~/app/(history)/Step";
 
 const workSteps: WorkStepProps[] = [
   {
@@ -21,9 +21,9 @@ const workSteps: WorkStepProps[] = [
   },
 ];
 
-const WorkStudy = () => {
+const WorkStudySection = () => {
   const workStepsList = useMemo(
-    () => workSteps.map((step, index) => <WorkStep key={index} {...step} />),
+    () => workSteps.map((step, index) => <Step key={index} {...step} />),
     [],
   );
   return (
@@ -56,4 +56,4 @@ const WorkStudy = () => {
   );
 };
 
-export default WorkStudy;
+export default WorkStudySection;

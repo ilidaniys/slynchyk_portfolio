@@ -11,9 +11,9 @@ export interface WorkStepProps {
   position: string;
 }
 
-const WorkStep = (props: WorkStepProps) => {
-    const startDateFormated = moment(props.startDate).format("MMM YYYY")
-    const endDateFormated = moment(props.endDate).format("MMM YYYY")
+const Step = (props: WorkStepProps) => {
+  const startDateFormated = moment(props.startDate).format("MMM YYYY");
+  const endDateFormated = moment(props.endDate).format("MMM YYYY");
 
   return (
     <div className={"relative flex h-28 items-center gap-5 px-10"}>
@@ -33,4 +33,4 @@ const WorkStep = (props: WorkStepProps) => {
   );
 };
 
-export default WorkStep;
+export default Step;

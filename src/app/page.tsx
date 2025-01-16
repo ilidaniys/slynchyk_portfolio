@@ -1,13 +1,17 @@
 import MainWrapper from "~/app/MainWrapper";
 import Header from "~/app/(headerPart)/Header";
-import WorkStudy from "~/app/(history)/WorkStudy";
+import WorkStudySection from "~/app/(history)/WorkStudySection";
+import ProjectSection from "~/app/(projects)/ProjectSection";
+import Footer from "~/app/(footer)/Footer";
 
 export default function HomePage() {
   return (
     <MainWrapper>
-      <div className={"flex w-1/2 flex-col gap-5"}>
+      <div className={"flex w-1/2 flex-col gap-10"}>
         <Header />
-        <WorkStudy />
+        <WorkStudySection />
+        <ProjectSection />
+        <Footer />
       </div>
     </MainWrapper>
   );

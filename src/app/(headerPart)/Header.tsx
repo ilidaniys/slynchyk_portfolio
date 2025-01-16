@@ -1,17 +1,17 @@
 "use client";
 import { Linkedin, MapPin } from "lucide-react";
-import React, { useCallback } from "react";
+import React from "react";
 import CVButton from "~/app/(headerPart)/CVButton";
 import GitHubIcon from "~/app/(headerPart)/GitHubIcon";
 
-const LINKED_IN_URL = "https://www.linkedin.com/in/andreu-slynchyk/";
-const GITHUB_URL = "https://github.com/ilidaniys";
+export const LINKED_IN_URL = "https://www.linkedin.com/in/andreu-slynchyk/";
+export const GITHUB_URL = "https://github.com/ilidaniys";
+
+export const handleSocialMediaClick = (url: string) => {
+  window.open(url, "_blank");
+};
 
 const Header = () => {
-  const handleSocialMediaClick = useCallback((url: string) => {
-    window.open(url, "_blank");
-  }, []);
-
   return (
     <div className={"z-10 flex flex-col items-start gap-5"}>
       <h1 className={"animate-popUp text-5xl font-bold"}>Slynchyk Andreu</h1>
