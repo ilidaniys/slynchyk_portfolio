@@ -1,23 +1,50 @@
 import React, { useMemo } from "react";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "~/components/ui/tabs";
 import Step, { type WorkStepProps } from "~/app/(history)/Step";
+import NineTwoThree from "../../../public/NineTwoTree.png";
+import EightAllocate from "../../../public/Allocate.png";
+import LeanSquad from "../../../public/LeanSquad.png";
+import Erbis from "../../../public/Erbis.png";
 
 const workSteps: WorkStepProps[] = [
   {
-    title: "Account",
-    image: "/images/work-study/account.svg",
-    fallBack: "ER",
-    position: "Update your account information.",
-    startDate: "2021-09-01",
-    endDate: "2021-09-30",
+    title: "Ninetwothree",
+    image: NineTwoThree,
+    fallBack: "NT",
+    position: "Software engineer",
+    startDate: "2024.06.01",
+    endDate: "2025.01",
   },
   {
-    title: "Account",
-    image: "/images/work-study/account.svg",
+    title: "Point Education",
+    fallBack: "PO",
+    position: "Lead developer",
+    startDate: "2024.03",
+    endDate: "2024.06",
+  },
+  {
+    title: "8allocate",
+    image: EightAllocate,
+    fallBack: "8A",
+    position: "Software engineer",
+    startDate: "2024.06.01",
+    endDate: "2025.01",
+  },
+  {
+    title: "LeanSquad",
+    image: LeanSquad,
+    fallBack: "LS",
+    position: "Software engineer",
+    startDate: "2023.06",
+    endDate: "2023.11",
+  },
+  {
+    title: "Erbis",
+    image: Erbis,
     fallBack: "ER",
-    position: "Update your account information.",
-    startDate: "2021-09-01",
-    endDate: "2021-09-30",
+    position: "Software engineer",
+    startDate: "2021",
+    endDate: "2023.06",
   },
 ];
 

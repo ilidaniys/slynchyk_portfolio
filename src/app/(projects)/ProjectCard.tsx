@@ -17,18 +17,18 @@ const ProjectCard = (props: ProjectCardProps) => {
         <div
           key={index}
           className={
-            "rounded-xl bg-gray-500 bg-opacity-80 px-2 py-1 text-sm text-white"
+            "rounded bg-[#717171] px-2 py-1 text-[10px] font-bold text-white"
           }
         >
           {skill}
         </div>
       )),
-    [],
+    [props.skills],
   );
   return (
     <div
       className={
-        "flex flex-col justify-between gap-5 rounded-xl border border-white p-5"
+        "flex max-w-[500px] flex-col items-start justify-between gap-5 rounded-xl border border-white p-5"
       }
     >
       <div className={"rounded"}>
@@ -42,7 +42,7 @@ const ProjectCard = (props: ProjectCardProps) => {
       </div>
       <h3>{props.title}</h3>
       <p className={"text-sm font-extralight"}>{props.description}</p>
-      <div className={"flex flex-wrap gap-3"}>{skillsList}</div>
+      <div className={"flex flex-wrap gap-1"}>{skillsList}</div>
       <div>
         <button>123</button>
       </div>

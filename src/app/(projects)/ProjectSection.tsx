@@ -2,7 +2,7 @@ import React, { useMemo } from "react";
 import ProjectCard, {
   type ProjectCardProps,
 } from "~/app/(projects)/ProjectCard";
-import myndy from "../../../public/img.png";
+import myndy from "../../../public/MyndyProject.png";
 
 const projects: ProjectCardProps[] = [
   {
@@ -32,7 +32,11 @@ const ProjectSection = () => {
   return (
     <div className={"flex flex-col gap-5"}>
       <h1 className={"text-3xl font-bold"}>Projects</h1>
-      <div className={"grid grid-cols-2 gap-5"}>{projectsList}</div>
+      <div
+        className={"grid grid-cols-2 justify-items-center gap-5 align-middle"}
+      >
+        {projectsList}
+      </div>
     </div>
   );
 };

@@ -25,7 +25,7 @@ const Skills = () => {
     return skillList.map((skill) => (
       <div
         className={
-          "text-md flex items-center justify-center rounded border border-gray-300 bg-slate-800 bg-opacity-80 p-2"
+          "text-md flex items-center justify-center rounded border border-gray-300 bg-slate-500 bg-opacity-20 px-2 py-1 font-extralight shadow-md"
         }
         key={skill}
       >
