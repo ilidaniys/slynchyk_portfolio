@@ -5,6 +5,7 @@ import NineTwoThree from "../../../public/NineTwoTree.png";
 import EightAllocate from "../../../public/Allocate.png";
 import LeanSquad from "../../../public/LeanSquad.png";
 import Erbis from "../../../public/Erbis.png";
+import Psychology from "../../../public/PsychologyDepartment.png";
 
 const workSteps: WorkStepProps[] = [
   {
@@ -48,9 +49,31 @@ const workSteps: WorkStepProps[] = [
   },
 ];
 
+const studySteps: WorkStepProps[] = [
+  {
+    title: "Taras Shevchenko National University of Kyiv - Kyiv, Ukraine",
+    image: Psychology,
+    fallBack: "PD",
+    position: "Psychology Department",
+    startDate: "2019",
+    endDate: "2023",
+  },
+  {
+    title: "Kyiv-Pechersk Lyceum No171 “Lider”",
+    fallBack: "LL",
+    position: "mathematics class",
+    startDate: "2012",
+    endDate: "2019",
+  },
+];
+
 const WorkStudySection = () => {
   const workStepsList = useMemo(
     () => workSteps.map((step, index) => <Step key={index} {...step} />),
+    [],
+  );
+  const studyStepsList = useMemo(
+    () => studySteps.map((step, index) => <Step key={index} {...step} />),
     [],
   );
   return (
@@ -75,7 +98,7 @@ const WorkStudySection = () => {
             className={"rounded-xl border border-white"}
             value="education"
           >
-            {workStepsList}
+            {studyStepsList}
           </TabsContent>
         </div>
       </Tabs>

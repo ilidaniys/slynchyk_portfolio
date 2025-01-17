@@ -1,5 +1,9 @@
+"use client";
 import React, { useMemo } from "react";
 import Image, { type StaticImageData } from "next/image";
+import { Button } from "~/components/ui/button";
+import { Globe } from "lucide-react";
+import { handleSocialMediaClick } from "~/app/(headerPart)/Header";
 
 export interface ProjectCardProps {
   img: StaticImageData;
@@ -33,18 +37,29 @@ const ProjectCard = (props: ProjectCardProps) => {
     >
       <div className={"rounded"}>
         <Image
-          className={"rounded-xl"}
+          className={"h-[200px] w-[500px] rounded-xl object-fill"}
           src={props.img}
           alt={"title"}
           width={500}
           height={500}
         />
       </div>
-      <h3>{props.title}</h3>
+      <h3 className={"text-xl font-bold"}>{props.title}</h3>
       <p className={"text-sm font-extralight"}>{props.description}</p>
       <div className={"flex flex-wrap gap-1"}>{skillsList}</div>
-      <div>
-        <button>123</button>
+      <div className={"flex w-full justify-between"}>
+        {props.website && (
+          <Button
+            variant="secondary"
+            onClick={() =>
+              props.website && handleSocialMediaClick(props.website)
+            }
+          >
+            <Globe />
+            website
+          </Button>
+        )}
+        {!props.website && !props.src && <div>coming soon...</div>}
       </div>
     </div>
   );

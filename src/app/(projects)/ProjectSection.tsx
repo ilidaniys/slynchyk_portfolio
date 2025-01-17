@@ -3,23 +3,32 @@ import ProjectCard, {
   type ProjectCardProps,
 } from "~/app/(projects)/ProjectCard";
 import myndy from "../../../public/MyndyProject.png";
+import pointEducationBanner from "../../../public/PointEducationBanner.png";
+import logiGroupBanner from "../../../public/LogiGroupBanner.png";
 
 const projects: ProjectCardProps[] = [
   {
     img: myndy,
-    title: "Project 1",
+    title: "Myndy",
     description:
-      "This search allows you search the entire page, chat with it ask questions to it.",
-    skills: ["Skill 1", "Skill 2"],
-    src: "https://example.com",
+      "Myndy is a platform that partners with organizations to build mentally fit teams through research-backed training and strategic consulting",
+    skills: ["TypeScript", "NodeJS", "ExpressJS", "PostgresSQL", "React"],
+    website: "https://www.myndy.co/",
   },
   {
-    img: myndy,
-    title: "Project 1",
+    img: pointEducationBanner,
+    title: "Point Education",
     description:
-      "This search allows you search the entire page, chat with it ask questions to it.",
-    skills: ["Skill 1", "Skill 2"],
-    src: "https://example.com",
+      "An innovative project redefining education in universities and schools through course graphs. This approach enables students to build personalized learning paths by visualizing the connections between subjects and modules, fostering deeper understanding and critical thinking.",
+    skills: ["TypeScript", "NodeJS", "NestJs", "MongoDB", "NextJs"],
+    website: "https://point.education/tree",
+  },
+  {
+    img: logiGroupBanner,
+    title: "LogiGuide",
+    description:
+      "An innovative product designed for efficient and fast retrieval of contact information in logistics. It streamlines communication by providing quick access to critical data, ensuring seamless coordination across the supply chain.",
+    skills: ["TypeScript", "NodeJS", "ExpressJS", "PostgresSQL", "RemixJs"],
   },
 ];
 

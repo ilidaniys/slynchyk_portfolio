@@ -8,7 +8,7 @@ import Skills from "~/app/(skills)/Skills";
 export default function HomePage() {
   return (
     <MainWrapper>
-      <div className={"flex w-1/2 flex-col gap-10"}>
+      <div className={"flex w-1/2 max-w-screen-lg flex-col gap-10"}>
         <Header />
         <WorkStudySection />
         <Skills />
