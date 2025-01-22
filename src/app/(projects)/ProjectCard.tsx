@@ -32,7 +32,7 @@ const ProjectCard = (props: ProjectCardProps) => {
   return (
     <div
       className={
-        "flex max-w-[500px] flex-col items-start justify-between gap-5 rounded-xl border border-white p-5"
+        "flex max-w-[350px] flex-col items-start justify-between gap-5 rounded-xl border border-white p-5"
       }
     >
       <div className={"rounded"}>

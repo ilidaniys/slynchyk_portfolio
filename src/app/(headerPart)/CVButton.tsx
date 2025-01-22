@@ -1,5 +1,6 @@
 import React from "react";
 import { FileDown } from "lucide-react";
+import { handleSocialMediaClick } from "~/app/(headerPart)/Header";
 
 const CV_FILE_NAME = "Andreu_Slynchyk_CV.pdf";
 
@@ -17,7 +18,7 @@ const CVButton = () => {
 
   return (
     <div
-      onClick={handleDownload}
+      onClick={() => handleSocialMediaClick("/" + CV_FILE_NAME)}
       className={
         "relative z-10 flex cursor-pointer items-center gap-3 overflow-hidden rounded border border-white bg-main px-5"
       }
