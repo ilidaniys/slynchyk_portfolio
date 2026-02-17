@@ -30,7 +30,9 @@ const ProjectSection = () => {
     <div className={"flex flex-col gap-5"}>
       <h1 className={"text-3xl font-bold"}>Projects</h1>
       <div
-        className={"grid grid-cols-2 justify-items-center gap-5 align-middle"}
+        className={
+          "grid grid-cols-1 justify-items-center gap-5 align-middle md:grid-cols-2"
+        }
       >
         {projectsList}
       </div>
