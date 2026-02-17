@@ -1,9 +1,13 @@
+"use client";
 import React from "react";
 import { FileDown } from "lucide-react";
+import { useMagneticEffect } from "~/hooks/useMagneticEffect";
 
 const CV_FILE_NAME = "Andrey_Slynchyk_Senior_Product_Engineer.pdf";
 
 const CVButton = () => {
+  const { magnetRef, magnetStyle } = useMagneticEffect();
+
   const handleDownload = () => {
     const fileUrl = "/" + CV_FILE_NAME;
 
@@ -17,6 +21,8 @@ const CVButton = () => {
 
   return (
     <div
+      ref={magnetRef}
+      style={magnetStyle}
       onClick={handleDownload}
       className={
         "group relative z-10 flex cursor-pointer items-center gap-3 overflow-hidden rounded border border-[#4af2c8]/40 px-5 py-1.5 hover:border-[#4af2c8]"

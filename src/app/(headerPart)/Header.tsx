@@ -3,6 +3,7 @@ import { Linkedin, MapPin } from "lucide-react";
 import React from "react";
 import CVButton from "~/app/(headerPart)/CVButton";
 import GitHubIcon from "~/app/(headerPart)/GitHubIcon";
+import { useMagneticEffect } from "~/hooks/useMagneticEffect";
 
 export const LINKED_IN_URL = "https://www.linkedin.com/in/andreu-slynchyk/";
 export const GITHUB_URL = "https://github.com/ilidaniys";
@@ -12,6 +13,9 @@ export const handleSocialMediaClick = (url: string) => {
 };
 
 const Header = () => {
+  const { magnetRef: linkedInRef, magnetStyle: linkedInStyle } = useMagneticEffect();
+  const { magnetRef: githubRef, magnetStyle: githubStyle } = useMagneticEffect();
+
   return (
     <div className={"z-10 flex flex-col items-start gap-5"}>
       <div className="overflow-hidden">
@@ -46,13 +50,17 @@ const Header = () => {
         >
           <CVButton />
           <div
-            className={"cursor-pointer text-[#8b8fa8] transition-all duration-200 hover:scale-110 hover:text-[#4af2c8]"}
+            ref={linkedInRef}
+            style={linkedInStyle}
+            className={"cursor-pointer text-[#8b8fa8] transition-colors duration-200 hover:text-[#4af2c8]"}
             onClick={() => handleSocialMediaClick(LINKED_IN_URL)}
           >
             <Linkedin width={20} />
           </div>
           <div
-            className={"w-6 cursor-pointer text-[#8b8fa8] transition-all duration-200 hover:scale-110 hover:text-[#4af2c8]"}
+            ref={githubRef}
+            style={githubStyle}
+            className={"w-6 cursor-pointer text-[#8b8fa8] transition-colors duration-200 hover:text-[#4af2c8]"}
             onClick={() => handleSocialMediaClick(GITHUB_URL)}
           >
             <GitHubIcon />

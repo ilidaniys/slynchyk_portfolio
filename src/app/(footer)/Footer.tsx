@@ -7,8 +7,12 @@ import {
   handleSocialMediaClick,
   LINKED_IN_URL,
 } from "../(headerPart)/Header";
+import { useMagneticEffect } from "~/hooks/useMagneticEffect";
 
 const Footer = () => {
+  const { magnetRef: linkedInRef, magnetStyle: linkedInStyle } = useMagneticEffect();
+  const { magnetRef: githubRef, magnetStyle: githubStyle } = useMagneticEffect();
+
   return (
     <div
       className={
@@ -18,13 +22,17 @@ const Footer = () => {
       <div></div>
       <div className={"flex items-center justify-center gap-5 opacity-100"}>
         <div
-          className={"cursor-pointer text-[#8b8fa8] transition-all duration-200 hover:scale-110 hover:text-[#4af2c8]"}
+          ref={linkedInRef}
+          style={linkedInStyle}
+          className={"cursor-pointer text-[#8b8fa8] transition-colors duration-200 hover:text-[#4af2c8]"}
           onClick={() => handleSocialMediaClick(LINKED_IN_URL)}
         >
           <Linkedin width={20} />
         </div>
         <div
-          className={"w-6 cursor-pointer text-[#8b8fa8] transition-all duration-200 hover:scale-110 hover:text-[#4af2c8]"}
+          ref={githubRef}
+          style={githubStyle}
+          className={"w-6 cursor-pointer text-[#8b8fa8] transition-colors duration-200 hover:text-[#4af2c8]"}
           onClick={() => handleSocialMediaClick(GITHUB_URL)}
         >
           <GitHubIcon />
