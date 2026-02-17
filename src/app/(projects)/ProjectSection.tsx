@@ -2,33 +2,21 @@ import React, { useMemo } from "react";
 import ProjectCard, {
   type ProjectCardProps,
 } from "~/app/(projects)/ProjectCard";
-import myndy from "../../../public/MyndyProject.png";
-import pointEducationBanner from "../../../public/PointEducationBanner.png";
-import logiGroupBanner from "../../../public/LogiGroupBanner.png";
 
 const projects: ProjectCardProps[] = [
   {
-    img: myndy,
-    title: "Myndy",
+    title: "ArtTrader",
     description:
-      "Myndy is a platform that partners with organizations to build mentally fit teams through research-backed training and strategic consulting",
-    skills: ["TypeScript", "NodeJS", "ExpressJS", "PostgresSQL", "React"],
-    website: "https://www.myndy.co/",
+      "An AI-powered cryptocurrency trading platform that lets users automate their strategies across exchanges like Binance and Bybit — deploying customizable trading robots that execute trades 24/7 based on configured indicators and rules.",
+    skills: ["TypeScript", "Next.js", "NestJS", "PostgreSQL", "AWS"],
+    website: "https://artrader.org/",
   },
   {
-    img: pointEducationBanner,
-    title: "Point Education",
+    title: "Mora",
     description:
-      "An innovative project redefining education in universities and schools through course graphs. This approach enables students to build personalized learning paths by visualizing the connections between subjects and modules, fostering deeper understanding and critical thinking.",
-    skills: ["TypeScript", "NodeJS", "NestJs", "MongoDB", "NextJs"],
-    website: "https://point.education/tree",
-  },
-  {
-    img: logiGroupBanner,
-    title: "LogiGuide",
-    description:
-      "An innovative product designed for efficient and fast retrieval of contact information in logistics. It streamlines communication by providing quick access to critical data, ensuring seamless coordination across the supply chain.",
-    skills: ["TypeScript", "NodeJS", "ExpressJS", "PostgresSQL", "RemixJs"],
+      "A life management app that helps users structure their life into meaningful areas, transform scattered thoughts into actionable goals through AI assistance, and execute tasks using focused work segments.",
+    skills: ["TypeScript", "Next.js", "Node.js", "LLM Integration"],
+    website: "https://moradesktop.vercel.app/",
   },
 ];
 

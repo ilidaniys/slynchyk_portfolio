@@ -9,11 +9,25 @@ import Psychology from "../../../public/PsychologyDepartment.png";
 
 const workSteps: WorkStepProps[] = [
   {
+    title: "ArtTrader",
+    fallBack: "AT",
+    position: "Founder & Lead Engineer",
+    startDate: "2023.06",
+    endDate: "ongoing",
+  },
+  {
+    title: "code.store",
+    fallBack: "CS",
+    position: "Senior Software Engineer",
+    startDate: "2025.02",
+    endDate: "ongoing",
+  },
+  {
     title: "Ninetwothree",
     image: NineTwoThree,
     fallBack: "NT",
-    position: "Software engineer",
-    startDate: "2024.06.01",
+    position: "Senior Software Engineer",
+    startDate: "2024.06",
     endDate: "2025.01",
   },
   {
@@ -28,8 +42,8 @@ const workSteps: WorkStepProps[] = [
     image: EightAllocate,
     fallBack: "8A",
     position: "Software engineer",
-    startDate: "2024.06.01",
-    endDate: "2025.01",
+    startDate: "2023.11",
+    endDate: "2024.03",
   },
   {
     title: "LeanSquad",
@@ -44,7 +58,7 @@ const workSteps: WorkStepProps[] = [
     image: Erbis,
     fallBack: "ER",
     position: "Software engineer",
-    startDate: "2021",
+    startDate: "2021.06",
     endDate: "2023.06",
   },
 ];
@@ -54,16 +68,9 @@ const studySteps: WorkStepProps[] = [
     title: "Taras Shevchenko National University of Kyiv - Kyiv, Ukraine",
     image: Psychology,
     fallBack: "PD",
-    position: "Psychology Department",
+    position: "Bachelor's Degree in Psychology",
     startDate: "2019",
     endDate: "2023",
-  },
-  {
-    title: "Kyiv-Pechersk Lyceum No171 “Lider”",
-    fallBack: "LL",
-    position: "mathematics class",
-    startDate: "2012",
-    endDate: "2019",
   },
 ];
 
@@ -89,13 +96,13 @@ const WorkStudySection = () => {
         </TabsList>
         <div className={"mt-2 transition-all"}>
           <TabsContent
-            className={"rounded-xl border border-white"}
+            className={"rounded-xl border border-white/10"}
             value="work"
           >
             {workStepsList}
           </TabsContent>
           <TabsContent
-            className={"rounded-xl border border-white"}
+            className={"rounded-xl border border-white/10"}
             value="education"
           >
             {studyStepsList}

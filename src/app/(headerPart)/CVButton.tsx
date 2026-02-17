@@ -1,7 +1,7 @@
 import React from "react";
 import { FileDown } from "lucide-react";
 
-const CV_FILE_NAME = "Andreu_Slynchyk_CV.pdf";
+const CV_FILE_NAME = "Andrey_Slynchyk_Senior_Product_Engineer.pdf";
 
 const CVButton = () => {
   const handleDownload = () => {
@@ -19,12 +19,21 @@ const CVButton = () => {
     <div
       onClick={handleDownload}
       className={
-        "relative z-10 flex cursor-pointer items-center gap-3 overflow-hidden rounded border border-white bg-main px-5"
+        "group relative z-10 flex cursor-pointer items-center gap-3 overflow-hidden rounded border border-[#4af2c8]/40 px-5 py-1.5 hover:border-[#4af2c8]"
       }
     >
-      <div className="absolute inset-0 w-0 bg-white transition-all hover:w-full"></div>
-      <FileDown width={15} />
-      <p className={"text-sm font-bold"}>Resume</p>
+      <div className="absolute inset-0 w-0 bg-[#4af2c8] transition-all group-hover:w-full"></div>
+      <FileDown
+        width={15}
+        className={"relative z-10 text-[#4af2c8] group-hover:text-[#0e0f14]"}
+      />
+      <p
+        className={
+          "relative z-10 text-sm font-bold group-hover:text-[#0e0f14]"
+        }
+      >
+        Resume
+      </p>
     </div>
   );
 };

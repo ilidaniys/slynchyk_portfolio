@@ -12,19 +12,19 @@ const Footer = () => {
   return (
     <div
       className={
-        "flex h-20 items-start justify-between border-t border-white border-opacity-20 px-4 pt-4"
+        "flex h-20 items-start justify-between border-t border-white/10 px-4 pt-4"
       }
     >
       <div></div>
       <div className={"flex items-center justify-center gap-5 opacity-100"}>
         <div
-          className={"hover:animate-wiggle cursor-pointer"}
+          className={"cursor-pointer text-[#8b8fa8] transition-all duration-200 hover:scale-110 hover:text-[#4af2c8]"}
           onClick={() => handleSocialMediaClick(LINKED_IN_URL)}
         >
           <Linkedin width={20} />
         </div>
         <div
-          className={"hover:animate-wiggle w-6 cursor-pointer"}
+          className={"w-6 cursor-pointer text-[#8b8fa8] transition-all duration-200 hover:scale-110 hover:text-[#4af2c8]"}
           onClick={() => handleSocialMediaClick(GITHUB_URL)}
         >
           <GitHubIcon />

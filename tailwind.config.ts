@@ -40,25 +40,37 @@ export default {
         popUp: {
           "0%": {
             opacity: "0",
-            transform: "translateY(100%)",
+            transform: "translateY(20px)",
           },
           "100%": {
             opacity: "1",
             transform: "translateY(0)",
           },
         },
+        glow: {
+          "0%, 100%": { opacity: "1" },
+          "50%": { opacity: "0.5" },
+        },
       },
       animation: {
         ripple: "ripple 20s infinite ease-in-out",
-        popUp: "popUp 0.9s ease-in-out forwards",
+        popUp: "popUp 0.7s ease-out forwards",
         wiggle: "wiggle 1s ease-in-out infinite",
         fill: "fill 0.5s linear forwards",
+        glow: "glow 3s ease-in-out infinite",
       },
       fontFamily: {
         sans: ["var(--font-geist-sans)", ...fontFamily.sans],
       },
       colors: {
-        main: "#5e5d5d1a",
+        mint: "#4af2c8",
+        "muted-text": "#8b8fa8",
+        portfolio: {
+          bg: "#0e0f14",
+          text: "#f0f0f0",
+          muted: "#8b8fa8",
+          accent: "#4af2c8",
+        },
         background: "hsl(var(--background))",
         foreground: "hsl(var(--foreground))",
         card: {

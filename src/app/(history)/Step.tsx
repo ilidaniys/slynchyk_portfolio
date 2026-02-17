@@ -23,16 +23,16 @@ const Step = (props: WorkStepProps) => {
 
   return (
     <div className={"relative flex h-28 items-center gap-5 px-10"}>
-      <div className={"absolute left-[66px] h-full w-0 border border-white"} />
+      <div className={"absolute left-[66px] h-full w-0 border border-white/10"} />
       <Avatar>
         <AvatarImage src={props?.image?.src} />
         <AvatarFallback>{props.fallBack}</AvatarFallback>
       </Avatar>
       <div className={"flex flex-col gap-2 text-sm"}>
-        <div className={"flex"}>
+        <div className={"flex text-[#8b8fa8]"}>
           {startDateFormated} - {endDateFormated}
         </div>
-        <div>{props.title}</div>
+        <div className={"font-medium"}>{props.title}</div>
         <div>{props.position}</div>
       </div>
     </div>
